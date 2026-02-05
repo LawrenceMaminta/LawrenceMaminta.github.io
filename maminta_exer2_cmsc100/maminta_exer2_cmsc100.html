@@ -1,0 +1,277 @@
+<!--Maminta, Lawrence Andrew P.
+	CMSC 100 U-2L
+	February 05, 2026
+	EXERCISE 02: HTML and CSS
+	-->
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lawrence's Portfolio</title>
+    
+    <!-- CSS -->
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        background: #f4f4f4;
+        color: #333;
+        line-height: 1.6;
+      }
+
+      h2 {
+        margin-bottom: 20px;
+      }
+
+      header {
+        background: #111;
+        color: #fff;
+        padding: 60px 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+      }
+
+      header img {
+        width: 160px;
+        height: 160px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 4px solid #fff;
+        margin-bottom: 20px;
+      }
+
+      /* SECTIONS */
+      section {
+        max-width: 1000px;
+        margin: auto;
+        padding: 50px 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 20px;
+      }
+
+      .about-section {
+        background-color: #ffffff;
+      }
+
+      .skills-section {
+        background-color: #f0f7ff;
+        padding: 50px 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+
+      .projects-section {
+        background-color: #fff5e6;
+      }
+
+      .others-section {
+        background-color: #f3f3f3;
+      }
+
+      .card {
+        background: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      .skills {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+        width: 100%;
+      }
+
+      .skills .card {
+        flex: 1 1 220px;
+        display: flex;
+        padding: 20px;
+        border-radius: 8px;
+        font-weight: bold;
+        text-align: center;
+      }
+
+      .skills .card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+      }
+
+      /* Skill colors */
+      .skills .card:nth-child(1) { background-color: #ff6b6b; color: #fff; }  /* HTML */
+      .skills .card:nth-child(2) { background-color: #f7c59f; color: #333; }  /*  */
+      .skills .card:nth-child(3) { background-color: #6bc1ff; color: #fff; }  /* Python */
+      .skills .card:nth-child(4) { background-color: #9f7ef7; color: #fff; }  /* R */
+      .skills .card:nth-child(5) { background-color: #ffda6b; color: #333; }  /* C */
+
+      .projects {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+        width: 100%;
+      }
+
+      .projects .card {
+        flex: 1 1 280px;
+        max-width: 320px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background: linear-gradient(135deg, #ffffff, #ffe6cc);;
+        border-radius: 12px;
+        box-shadow: 0 4px 12 px rgba(0,0,0,0.1);
+        text-align: center;
+        padding: 20px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      .projects img {
+        width: 100%;
+        border-radius: 10px;
+        margin: 10px 0;
+        object-fit: cover;
+        transition: transform 0.3s ease;
+      }
+      
+      .projects .card img:hover {
+        transform: scale(1.05);
+      }
+
+      .projects .card h3 {
+        margin: 15px 0 10px;
+        font-size: 1.2rem;
+        color: #333;
+      }
+
+      .projects .card p {
+        font-size: 0.95rem;
+        line-height: 1.5;
+        color: #555;
+      }
+      
+      a {
+        color: #0077cc;
+        text-decoration: none;
+      }
+
+      a:hover {
+        text-decoration: underline;
+      }
+
+      footer {
+        background: #111;
+        color: #fff;
+        padding: 25px 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 10px;
+        font-size: 14px;
+      }
+
+      .back-to-top {
+        color: #00aaff;
+        font-weight: bold;
+      }
+
+    </style>
+  </head>
+
+  <body>
+    <header id="top">
+      <img src="LawrencePhoto.PNG" alt="Your Photo"/>
+      <h1>Hi! I'm Lawrence Andrew Maminta!</h1>
+      <p>Web Developer | Designer | Logical Thinker</p>
+    </header>
+
+    <!-- About Me -->
+    <section class="about-section">
+      <h2>About Me</h2>
+      <p>
+        I'm Lawrence Andrew Maminta. I'm 21 years old and I live in San Mateo, Rizal. I took BS Computer Science at the University of the Philippines. I can say that I enjoy coding. I am a very passionate developer who likes to create clean, and user-friendly websites. I'm in a constant cycle of learning new things about technology to improve my skills and craft.
+      </p>
+    </section>
+
+    <!-- Skills -->
+    <section class="skills-section">
+      <h2>Skills</h2>
+      <div class="skills">
+        <div class="card">HTML</div>
+        <div class="card">CSS</div>
+        <div class="card">JavaScript</div>
+        <div class="card">Git & GitHub</div>
+        <div class="card">UI Design</div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section class="projects-section">
+      <h2>Previous Projects</h2>
+      <div class="projects">
+        <div class="card">
+          <img src="CityPollutionProject1.PNG" alt="1st picture">
+          <img src="CityPollutionProject2.PNG" alt="2nd picture">
+          <h3>City Pollution Reduction Plan</h3>
+          <p>
+            This application helps you identify the most cost-effective combination of pollution mitigation projects for the city of Greenvale. The concept of Linear Programming and Simplex method was applied in creating this application. This application was developed using R programming language, particularly RShiny.
+          </p>
+        </div>
+
+        <div class="card">
+          <img src="Strings1.PNG" alt="first pic">
+          <img src="Strings2.PNG" alt="second pic">
+          <h3>STRINGS: A New York Times Game Replica</h3>
+          <p>
+            This is a puzzle game (done in terminal) that consists of a group of words in an 8x6 grid. The words follow one theme with a spangram that traverses from one side of the board to the other side. The game ends when all the theme words in the puzzle have been found (win case) or when the player decides to reveal all the words (lose case). This game was developed using Python. 
+          </p>
+        </div>
+
+        <div class="card">
+          <img src="LVJShopping1.PNG" alt="1st pic">
+          <img src="LVJShopping2.PNG" alt="2nd pic">
+          <h3>LVJ Shopping</h3>
+          <p>
+            This application is an online storefront that allows users to act as buyers and/sellers of different types of products, just like Shopee. This application was developed using Java and JavaGUI. 
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Other Information -->
+    <section class="others-section">
+      <h2>Other Information</h2>
+      <p>
+        Whenever I'm not coding, I enjoy playing video games, watching sci-fi movies, and photography. I also to read and learn new things in general.
+        You can also find me on 
+        <a href="#">Facebook</a>,
+        <a href="#">GitHub</a>
+      </p>
+    </section>
+
+    <footer>
+      <p>Current Address: One Silangan Place Dormitory, Victoria M Ela Avenue, Los Baños
+      <br>Contact Number: 09454262755
+      <br>© 2026 Lawrence Andrew Maminta. All rights reserved.</p>
+      <a href="#top" class="back-to-top">↑ Back to Top</a>
+    </footer>
+
+  </body>
+</html>
